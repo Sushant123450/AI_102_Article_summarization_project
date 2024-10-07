@@ -159,7 +159,7 @@ import time
                     summary = summarize_text(extracted_text)
                     st.subheader("Summary")
                     st.write(summary)
-    ```
+```
 ---
 ### Running the Application
 
