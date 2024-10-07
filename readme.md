@@ -160,8 +160,8 @@ import time
                     st.subheader("Summary")
                     st.write(summary)
     ```
-
-## Running the Application
+---
+### Running the Application
 
 1. Start the Streamlit App: In your terminal, navigate to the project directory and run the following command:
    ```bash
