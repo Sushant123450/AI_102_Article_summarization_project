@@ -39,33 +39,37 @@ This project is a web application that extracts text from a PDF or processes pla
 
 1. **Clone the Repository** (or set up your project directory):
 
-   ```bash
+   ````bash
    git clone https://github.com/your-repo/pdf-text-summarizer.git
    cd pdf-text-summarizer
     ```
-2 . **Install Required Libraries**  Install the required Python libraries using pip
+   2 . **Install Required Libraries**  Install the required Python libraries using pip
     ```bash
     pip install streamlit azure-ai-formrecognizer azure-openai python-dotenv
     ```
-3. **Create a .env file** in the root directory and add the following keys:
-    ``` bash
-    AZURE_OPENAI_KEY=your-openai-key
-    AZURE_OPENAI_ENDPOINT=your-openai-endpoint
-    AZURE_OPENAI_DEPLOYMENT_NAME=your-deployment-name
-    AZURE_FORM_RECOGNIZER_KEY=your-form-recognizer-key
-    AZURE_FORM_RECOGNIZER_ENDPOINT=your-form-recognizer-endpoint
-    ```
+   ````
+
+2. **Create a .env file** in the root directory and add the following keys:
+   ```bash
+   AZURE_OPENAI_KEY=your-openai-key
+   AZURE_OPENAI_ENDPOINT=your-openai-endpoint
+   AZURE_OPENAI_DEPLOYMENT_NAME=your-deployment-name
+   AZURE_FORM_RECOGNIZER_KEY=your-form-recognizer-key
+   AZURE_FORM_RECOGNIZER_ENDPOINT=your-form-recognizer-endpoint
+   ```
+
 ### Step 3: Create the Python Script
+
 Create a Python file (e.g., app.py) in your project directory with the following code:
-    ```python
-    import streamlit as st
-    import os
-    from openai import AzureOpenAI
-    from azure.ai.formrecognizer import DocumentAnalysisClient
-    from azure.core.credentials import AzureKeyCredential
-    from dotenv import load_dotenv
-    from io import BytesIO
-    import time
+```python
+import streamlit as st
+import os
+from openai import AzureOpenAI
+from azure.ai.formrecognizer import DocumentAnalysisClient
+from azure.core.credentials import AzureKeyCredential
+from dotenv import load_dotenv
+from io import BytesIO
+import time
 
     # Load environment variables from .env file
     load_dotenv()
@@ -156,3 +160,11 @@ Create a Python file (e.g., app.py) in your project directory with the following
                     st.subheader("Summary")
                     st.write(summary)
     ```
+
+## Running the Application
+
+1. Start the Streamlit App: In your terminal, navigate to the project directory and run the following command:
+   ```bash
+   streamlit run app.py
+   ```
+2. Access the Application: Once Streamlit is running, your web browser will open, or you can go to http://localhost:8501 to view the app.
