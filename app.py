@@ -49,9 +49,9 @@ def summarize_text(text):
     response = client.completions.create(
         model=openai_deployment_name,
         prompt=prompt,
-        max_tokens=500,  
-        temperature=0.7,  
-        top_p=0.9, 
+        max_tokens=500,
+        temperature=0.7,
+        top_p=0.9,
         frequency_penalty=0,
         presence_penalty=0,
     )
